@@ -76,7 +76,7 @@ CPPFLAGS += -D $(MAPPED_DEVICE)
 
 # Flags - Linker Options
 # CPPFLAGS += -nostdlib
-CPPFLAGS += -Wl,-L$(BASE_LINKER),-T$(BASE_LINKER)/$(SERIES_FOLDER)/$(DEVICE).ld
+CPPFLAGS += -Wl,-L$(BASE_LINKER),-L./config,-T$(BASE_LINKER)/$(SERIES_FOLDER)/$(DEVICE).ld
 
 # Flags - Directory Options
 CPPFLAGS += -I./inc
